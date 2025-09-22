@@ -4,7 +4,7 @@ url = input('Enter URL: ')
 image_name = url.split('/')[-1]
 if image_name == "":
     image_name = url.split('/')[-2]
-
+image_name = image_name.split('?')[0]
 
 
 response = requests.get(url)
